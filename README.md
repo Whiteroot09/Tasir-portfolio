@@ -18,7 +18,8 @@ Welcome to my personal developer portfolio — a single-page site showcasing my 
 
 ## 📸 Screenshots
 
-> _Add screenshots of homepage, project cards, and contact section here._
+### 🔍 Home Page
+![Home Page](./webhome.jpeg)
 
 ## 🔗 Live Demo
 
