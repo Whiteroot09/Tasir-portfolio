@@ -45,7 +45,7 @@ html, body {
 
 body {
     /* Initial fallback gradient */
-    background: linear-gradient(120deg,  #ee5aae, #df59bf, #ca5ccf, #ae61df, #8868ec, #677df8, #418efe, #009dff, #00b8ff, #00d0ff, #00e6fa, #05f9e9);
+    background: linear-gradient(120deg,  #ffceea, #cf85be, #ca5ccf, #9c51cb, #8868ec, #677df8, #418efe, #009dff, #00b8ff, #00d0ff, #00e6fa, #05f9e9);
     background-size: 400% 400%;
     transition: background 0.5s;
     color: var(--body-text-color); /* Set body text color to black */
@@ -280,11 +280,20 @@ section {
 }
 .about-img {
     width: 25vw;
-    border-radius: 0.5rem;
-    justify-self: center;
-    align-self: center;
-    transition: transform 0.5s;
-    box-shadow: 0 0 10px var(--main-color);
+    animation: img 10s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 
+        0 0 25px var(--img-border), 
+        0 0 50px var(--img-border), 
+        0 0 100px var(--img-border);
+    transition: 
+        transform 0.6s cubic-bezier(0.4,0,0.2,1),
+        box-shadow 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes img {
+    0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60% }
+    100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
 }
 .about-img:hover {
     transform: translateY(-10px) scale(1.01);
