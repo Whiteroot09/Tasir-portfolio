@@ -178,7 +178,7 @@ section {
 
 /* =================== Home Image Animation =================== */
 .home-img img {
-    width: 350px;
+    width: 400px;
     animation: img 10s ease-in-out infinite;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     box-shadow: 
@@ -1213,7 +1213,7 @@ hr {
         font-size: 2rem;
     }
     .home-img img {
-        width: 200px;
+        width: 280px;
     }
     .home-content h1 {
         font-size: 2.2rem;
