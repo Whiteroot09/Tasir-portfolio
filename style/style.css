@@ -44,6 +44,10 @@ html, body {
 }
 
 body {
+    /* Initial fallback gradient */
+    background: linear-gradient(120deg,  #ee5aae, #df59bf, #ca5ccf, #ae61df, #8868ec, #677df8, #418efe, #009dff, #00b8ff, #00d0ff, #00e6fa, #05f9e9);
+    background-size: 400% 400%;
+    transition: background 0.5s;
     color: var(--body-text-color); /* Set body text color to black */
     font-family: 'Poppins', sans-serif;
     
@@ -79,7 +83,6 @@ body {
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    
 }
 .logo:hover {
     transform: scale(1.1);
@@ -176,12 +179,15 @@ section {
 /* =================== Home Image Animation =================== */
 .home-img img {
     width: 350px;
-    animation: img 5s linear infinite;
+    animation: img 10s ease-in-out infinite;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     box-shadow: 
         0 0 25px var(--img-border), 
         0 0 50px var(--img-border), 
         0 0 100px var(--img-border);
+    transition: 
+        transform 0.6s cubic-bezier(0.4,0,0.2,1),
+        box-shadow 0.6s cubic-bezier(0.4,0,0.2,1);
 }
 @keyframes img {
     0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
@@ -631,6 +637,7 @@ section {
     transition: all 0.3s ease;
     cursor: pointer;
     transform: translateY(0);
+    /* border: 1px solid red; Add this line for debugging */
 }
 
 .skills_content:hover {
@@ -669,6 +676,10 @@ section {
 }
 
 .skills_list {
+    display: none;
+}
+
+.skills_content.skills_open .skills_list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
@@ -1417,5 +1428,13 @@ img, video, canvas, svg {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.skill {
+    margin-bottom: 0rem;
+}
+
+.project {
+    margin-top: 0rem;
 }
 
